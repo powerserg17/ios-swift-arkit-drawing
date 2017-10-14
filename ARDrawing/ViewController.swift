@@ -56,10 +56,8 @@ extension ViewController: ARSCNViewDelegate {
                 pointer.position = currentPositionOfCamera
                 
                 self.sceneView.scene.rootNode.enumerateChildNodes({ (node, _) in
-                    if node.geometry is SCNBox {
-                        if node.name == "pointer" {
-                            node.removeFromParentNode()
-                        }
+                    if node.name == "pointer" {
+                        node.removeFromParentNode()
                     }
                 })
                 
